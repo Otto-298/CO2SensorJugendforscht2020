@@ -1,7 +1,7 @@
 <?php
 
 $link = mysqli_connect("localhost", "phpmyadmin", "arduino", "co2data");
-$query = "SELECT uid, TIME(timestamp) as dbTime, co2_concentration FROM sensor1 ORDER BY uid DESC LIMIT 40";
+$query = "SELECT uid, TIME(timestamp) as dbTime, co2_concentration FROM sensor1 ORDER BY uid DESC LIMIT 36";
 
 //query above is executed
 $result = mysqli_query($link, $query);
