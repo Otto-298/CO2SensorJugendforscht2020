@@ -195,7 +195,7 @@ void setup() {
   });
 
   acserver.onNotFound(notFound);
-  acserver.begin(); //start Server for congig
+  acserver.begin(); //start Server for configuration
   
   while((ssid == "") and (passwort == "") and (server_ip == "") and (sensor_nr == "") and (WiFi_Mode == true)){  //wait until config is complete
     display.clearDisplay();  
