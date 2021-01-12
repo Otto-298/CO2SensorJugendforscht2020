@@ -56,11 +56,11 @@ int gelbeLED = D7;
 int roteLED  = D8; 
 int speaker  = D5; 
 
-//Akustischer Alarm 
+//Piezo
 int anz_alarm = 0;
 int max_anz_alarm = 2;
 
-//Vorheizen
+//Preheat
 int vorheiz_zeit = 20; //IdR. 3min/180s, zu Testwecken 20
 int anz_balken = 0;
 
@@ -426,8 +426,8 @@ void loop() {
 
   int concentrationToDB_gesamt = 0;
 
-  //read Sensor for data to DBserver (60*10 times) , for Testing 12*10 -> 2min interval
-  for (int i = 0; i < 12; i++)
+  //read Sensor for data to DBserver (60*10 times)-> 10min interval (for Testing 12*10 -> 2min interval)
+  for (int i = 0; i < 60; i++)
   {
     int co2_gesamt = 0;
 
@@ -488,7 +488,7 @@ void loop() {
     }
   }
 
-  
+  //only send Data if WiFi Mode is enabled
   if (WiFi_Mode == true){
   
     //show ERROR Message when connection failed
