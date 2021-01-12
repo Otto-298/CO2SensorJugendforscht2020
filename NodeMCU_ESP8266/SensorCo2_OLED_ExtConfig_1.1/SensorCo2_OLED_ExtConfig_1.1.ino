@@ -209,7 +209,7 @@ void setup() {
     display.print("CO2-Sensor");
     display.display();
 
-    delay(2500);  //REPLAC WITH MILIS
+    delay(2500);  
 
     display.clearDisplay();  
     display.setTextSize(1); 
